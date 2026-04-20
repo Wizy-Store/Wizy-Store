@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WiZy Store</title>
+  <style>
+    body { font-family: Arial; margin: 0; background: #f5f5f5; }
+    header { background: linear-gradient(90deg,#111,#333); color: #fff; padding: 20px; text-align: center; }
+    nav { background: #000; display: flex; justify-content: center; flex-wrap: wrap; }
+    nav a { color: #fff; padding: 12px 20px; text-decoration: none; }
+    nav a:hover { background: #444; }
+    section { padding: 30px; }
+    h2 { text-align: center; }
+    .products { display: grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap: 20px; }
+    .product { background: #fff; padding: 15px; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    .product img { width: 100%; border-radius: 10px; }
+    .price { color: green; font-weight: bold; }
+    .btn { display: block; margin-top: 10px; padding: 10px; background: black; color: #fff; text-decoration: none; border-radius: 8px; }
+    .btn:hover { background: #333; }
+    .cart { position: fixed; top: 20px; left: 20px; background: #000; color: #fff; padding: 10px 15px; border-radius: 10px; }
+    footer { background: #111; color: #fff; text-align: center; padding: 15px; }
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #25D366;
+      color: white;
+      padding: 15px;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 20px;
+    }
+    input,button { padding:10px; margin:5px; border-radius:8px; border:1px solid #ccc; }
+  </style>
+</head>
+<body><div class="cart">🛒 السلة: <span id="cart-count">0</span></div><header>
+  <h1>WiZy Store</h1>
+  <p>متجر احترافي للتسوق أونلاين</p>
+</header><nav>
+  <a href="#home">الرئيسية</a>
+  <a href="#products">المنتجات</a>
+  <a href="#subscribe">الاشتراك</a>
+  <a href="#contact">تواصل معنا</a>
+</nav><section id="home">
+  <h2>مرحبًا بك في WiZy</h2>
+  <p style="text-align:center">أفضل المنتجات بأفضل الأسعار مع تجربة شراء سهلة وسريعة</p>
+</section><section id="products">
+  <h2>المنتجات</h2>
+  <div class="products"><div class="product">
+  <img src="https://via.placeholder.com/250">
+  <h3>سماعات بلوتوث</h3>
+  <p class="price">250 جنيه</p>
+  <button class="btn" onclick="addToCart()">أضف للسلة</button>
+  <a class="btn" href="https://wa.me/201XXXXXXXXX?text=عايز أطلب سماعات بلوتوث">اطلب واتساب</a>
+</div>
+
+<div class="product">
+  <img src="https://via.placeholder.com/250">
+  <h3>ساعة ذكية</h3>
+  <p class="price">500 جنيه</p>
+  <button class="btn" onclick="addToCart()">أضف للسلة</button>
+  <a class="btn" href="https://wa.me/201XXXXXXXXX?text=عايز أطلب ساعة ذكية">اطلب واتساب</a>
+</div>
+
+<div class="product">
+  <img src="https://via.placeholder.com/250">
+  <h3>باور بانك</h3>
+  <p class="price">300 جنيه</p>
+  <button class="btn" onclick="addToCart()">أضف للسلة</button>
+  <a class="btn" href="https://wa.me/201XXXXXXXXX?text=عايز أطلب باور بانك">اطلب واتساب</a>
+</div>
+
+  </div>
+</section><section id="subscribe">
+  <h2>الاشتراك</h2>
+  <p style="text-align:center">اشترك ليصلك أحدث العروض</p>
+  <div style="text-align:center">
+    <input type="email" placeholder="اكتب بريدك الإلكتروني">
+    <button onclick="subscribe()">اشترك</button>
+  </div>
+</section><section id="contact">
+  <h2>تواصل معنا</h2>
+  <p style="text-align:center">راسلنا عبر واتساب أو البريد الإلكتروني</p>
+</section><a class="whatsapp" href="https://wa.me/201XXXXXXXXX" target="_blank">💬</a>
+
+<footer>
+  <p>© 2026 WiZy Store</p>
+</footer><script>
+let count = 0;
+function addToCart(){
+  count++;
+  document.getElementById("cart-count").innerText = count;
+}
+
+function subscribe(){
+  alert("تم الاشتراك بنجاح 🔥");
+}
+</script></body>
+</html>
